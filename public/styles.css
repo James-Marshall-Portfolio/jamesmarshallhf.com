@@ -868,3 +868,304 @@ a {
   }
 
 }
+
+/* =====================================================
+   STEP 1 — DARK VISUAL SYSTEM EXPERIMENT
+   This section intentionally overrides the original
+   visual styling without changing page structure.
+===================================================== */
+
+:root {
+  --navy: #32bff3;
+  --navy-dark: #e9eef3;
+  --blue: #32bff3;
+  --blue-light: #19354a;
+
+  --text: #e9eef3;
+  --muted: #94a4b5;
+
+  --background: #07101a;
+  --background-alt: #0a1521;
+
+  --surface: #0d1926;
+  --surface-hover: #111f2e;
+
+  --border: #1e354a;
+
+  --accent: #32bff3;
+  --accent-secondary: #4e86c5;
+}
+
+
+/* ---------- PAGE ---------- */
+
+body {
+  background: var(--background);
+  color: var(--text);
+}
+
+
+/* ---------- NAVIGATION ---------- */
+
+.site-header {
+  background: rgba(7, 16, 26, 0.92);
+  border-bottom: 1px solid var(--border);
+}
+
+.site-name {
+  color: var(--text);
+}
+
+.main-nav a {
+  color: var(--muted);
+}
+
+.main-nav a:hover {
+  color: var(--accent);
+}
+
+
+/* ---------- HERO ---------- */
+
+.hero {
+  background: var(--background);
+}
+
+.eyebrow {
+  color: var(--accent);
+}
+
+.hero h1 {
+  color: var(--text);
+}
+
+.hero-description {
+  color: var(--muted);
+}
+
+
+/* ---------- BUTTONS ---------- */
+
+.button {
+  border-radius: 5px;
+}
+
+.primary-button {
+  background: var(--accent);
+  color: #04101a;
+
+  border: 1px solid var(--accent);
+}
+
+.primary-button:hover {
+  background: #66d1f7;
+  border-color: #66d1f7;
+
+  transform: translateY(-2px);
+}
+
+.secondary-button {
+  background: transparent;
+
+  border: 1px solid var(--border);
+
+  color: var(--text);
+}
+
+.secondary-button:hover {
+  color: var(--accent);
+
+  border-color: var(--accent);
+
+  background: rgba(50, 191, 243, 0.06);
+}
+
+
+/* ---------- SYSTEM MOTIF ---------- */
+
+.node {
+  background: var(--accent);
+}
+
+.connection {
+  background: var(--border);
+}
+
+
+/* ---------- GENERAL SECTIONS ---------- */
+
+.section {
+  background: var(--background);
+}
+
+.section-alt {
+  background: var(--background-alt);
+}
+
+.section-number {
+  color: var(--accent);
+}
+
+.section h2 {
+  color: var(--text);
+}
+
+.section-intro {
+  color: var(--muted);
+}
+
+
+/* ---------- PROJECT CARDS ---------- */
+
+.project-card {
+  background: var(--surface);
+
+  border: 1px solid var(--border);
+
+  border-radius: 7px;
+
+  box-shadow: none;
+}
+
+.project-card:hover {
+  background: var(--surface-hover);
+
+  border-color: rgba(50, 191, 243, 0.65);
+
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 14px 34px rgba(0, 0, 0, 0.22);
+}
+
+.featured-project {
+  border-top: 3px solid var(--accent);
+}
+
+.project-label {
+  color: var(--accent);
+}
+
+.project-card h3 {
+  color: var(--text);
+}
+
+.project-card p {
+  color: var(--muted);
+}
+
+
+/* ---------- TAGS ---------- */
+
+.tags span {
+  background: rgba(50, 191, 243, 0.06);
+
+  border: 1px solid var(--border);
+
+  color: #a9dff3;
+
+  border-radius: 4px;
+}
+
+.project-link {
+  color: var(--accent);
+}
+
+.project-link:hover {
+  color: #78d9fa;
+}
+
+
+/* ---------- CAPABILITIES ---------- */
+
+.capability-card {
+  background: var(--surface);
+
+  border-top: 2px solid var(--accent);
+}
+
+.capability-number {
+  color: var(--accent);
+}
+
+.capability-card h3 {
+  color: var(--text);
+}
+
+.capability-card p {
+  color: var(--muted);
+}
+
+
+/* ---------- TOOLS ---------- */
+
+.tools-strip {
+  background: #050c13;
+
+  border: 1px solid var(--border);
+
+  color: var(--text);
+}
+
+.tools-list span {
+  color: #b9c8d6;
+}
+
+
+/* ---------- ABOUT ---------- */
+
+.about-heading h2 {
+  color: var(--text);
+}
+
+.about-content {
+  color: var(--muted);
+}
+
+
+/* ---------- CONTACT ---------- */
+
+.contact-section {
+  background: #050c13;
+
+  border-top: 1px solid var(--border);
+}
+
+.light-number {
+  color: var(--accent);
+}
+
+.contact-section h2 {
+  color: var(--text);
+}
+
+.contact-section p {
+  color: var(--muted);
+}
+
+.contact-links a {
+  color: var(--text);
+}
+
+.contact-links a:hover {
+  color: var(--accent);
+}
+
+
+/* ---------- FOOTER ---------- */
+
+.site-footer {
+  background: #03080e;
+
+  border-top: 1px solid #142536;
+
+  color: #74879a;
+}
+
+
+/* ---------- TEXT SELECTION ---------- */
+
+::selection {
+  background: var(--accent);
+  color: #04101a;
+}
