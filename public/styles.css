@@ -1636,3 +1636,1029 @@ body {
 .hero-actions a {
   pointer-events: auto;
 }
+
+
+
+/* =====================================================
+   STEP 2 — HERO + RECENT WORK
+===================================================== */
+
+
+/* =====================================================
+   HERO REFINEMENTS
+===================================================== */
+
+.hero {
+  min-height: calc(100vh - 76px);
+}
+
+
+/* ---------- HERO NAME ---------- */
+
+.hero-name {
+  margin:
+    0
+    0
+    0.65rem;
+
+  color: var(--text);
+
+  font-size: 1rem;
+  font-weight: 750;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.16em;
+}
+
+
+/* ---------- EYEBROW ADJUSTMENT ---------- */
+
+.hero .eyebrow {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}
+
+
+/* =====================================================
+   HERO SCROLL PROMPT
+===================================================== */
+
+.scroll-prompt {
+  position: absolute;
+
+  left: 50%;
+  bottom: 1.9rem;
+
+  z-index: 4;
+
+  display: flex;
+  align-items: center;
+
+  gap: 0.7rem;
+
+  transform:
+    translateX(-50%);
+
+  color: var(--muted);
+
+  text-decoration: none;
+
+  text-transform: uppercase;
+
+  font-size: 0.72rem;
+  font-weight: 700;
+
+  letter-spacing: 0.16em;
+
+  opacity: 0.72;
+
+  transition:
+    color 0.3s ease,
+    opacity 0.3s ease,
+    transform 0.3s ease;
+}
+
+
+.scroll-prompt span:first-child,
+.scroll-prompt span:last-child {
+  color: var(--accent);
+
+  font-size: 0.9rem;
+
+  transition:
+    transform 0.3s ease;
+}
+
+
+.scroll-prompt:hover {
+  color: var(--text);
+
+  opacity: 1;
+
+  transform:
+    translateX(-50%)
+    translateY(3px);
+}
+
+
+.scroll-prompt:hover span:first-child,
+.scroll-prompt:hover span:last-child {
+  transform:
+    translateY(2px);
+}
+
+
+
+/* =====================================================
+   RECENT WORK — SECTION
+===================================================== */
+
+.recent-work {
+  position: relative;
+
+  padding:
+    8rem
+    0;
+
+  background:
+    linear-gradient(
+      180deg,
+      #08121d 0%,
+      #0a1521 45%,
+      #07101a 100%
+    );
+
+  border-top:
+    1px solid
+    var(--border);
+
+  border-bottom:
+    1px solid
+    var(--border);
+}
+
+
+
+/* =====================================================
+   RECENT WORK — HEADER
+===================================================== */
+
+.recent-header {
+  max-width: 950px;
+
+  margin-bottom: 5rem;
+}
+
+
+.recent-label-row {
+  display: flex;
+  justify-content: space-between;
+
+  align-items: center;
+
+  margin-bottom: 1.8rem;
+
+  border-bottom:
+    1px solid
+    var(--border);
+
+  padding-bottom: 0.8rem;
+}
+
+
+.recent-label,
+.recent-year {
+  margin: 0;
+
+  color: var(--accent);
+
+  font-size: 0.75rem;
+  font-weight: 750;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.15em;
+}
+
+
+.recent-header h2 {
+  max-width: 900px;
+
+  margin:
+    0
+    0
+    1.8rem;
+
+  color: var(--text);
+
+  font-size:
+    clamp(
+      2.8rem,
+      6vw,
+      5.6rem
+    );
+
+  line-height: 0.98;
+
+  letter-spacing: -0.045em;
+}
+
+
+.recent-intro {
+  max-width: 720px;
+
+  margin: 0;
+
+  color: var(--muted);
+
+  font-size: 1.18rem;
+}
+
+
+
+/* =====================================================
+   RECENT WORK — OPENING
+===================================================== */
+
+.recent-opening {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.35fr)
+    minmax(300px, 0.65fr);
+
+  gap: 4rem;
+
+  align-items: center;
+
+  margin-bottom: 8rem;
+}
+
+
+
+/* =====================================================
+   PORTFOLIO VISUAL
+===================================================== */
+
+.portfolio-preview {
+  position: relative;
+}
+
+
+.preview-browser {
+  overflow: hidden;
+
+  border:
+    1px solid
+    var(--border);
+
+  border-radius: 9px;
+
+  background: #050c13;
+
+  box-shadow:
+    0
+    25px
+    70px
+    rgba(0, 0, 0, 0.28);
+}
+
+
+.preview-browser-bar {
+  height: 44px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 7px;
+
+  padding:
+    0
+    14px;
+
+  background: #09131e;
+
+  border-bottom:
+    1px solid
+    var(--border);
+}
+
+
+.preview-browser-bar > span {
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: #385166;
+}
+
+
+.preview-address {
+  margin-left: 12px;
+
+  padding:
+    0.22rem
+    0.75rem;
+
+  color: #647b90;
+
+  background: #07101a;
+
+  border-radius: 4px;
+
+  font-size: 0.62rem;
+}
+
+
+.preview-page {
+  min-height: 400px;
+
+  padding:
+    1.7rem
+    2rem;
+
+  background:
+    radial-gradient(
+      circle at 80% 25%,
+      rgba(50, 191, 243, 0.09),
+      transparent 35%
+    ),
+    #07101a;
+}
+
+
+.preview-nav {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+
+  padding-bottom: 2.2rem;
+
+  color: #71869a;
+
+  font-size: 0.58rem;
+}
+
+
+.preview-name {
+  color: #dce6ee;
+
+  font-weight: 700;
+}
+
+
+.preview-nav div {
+  display: flex;
+
+  gap: 1rem;
+}
+
+
+.preview-hero {
+  display: grid;
+
+  grid-template-columns:
+    1fr
+    180px;
+
+  gap: 2rem;
+
+  align-items: center;
+
+  min-height: 280px;
+}
+
+
+.preview-copy {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-start;
+}
+
+
+.preview-eyebrow {
+  margin-bottom: 1.1rem;
+
+  color: var(--accent);
+
+  font-size: 0.5rem;
+
+  letter-spacing: 0.13em;
+}
+
+
+.preview-copy strong {
+  color: #e9eef3;
+
+  font-size:
+    clamp(
+      1.6rem,
+      3vw,
+      2.7rem
+    );
+
+  line-height: 1;
+
+  letter-spacing: -0.04em;
+}
+
+
+.preview-buttons {
+  display: flex;
+
+  gap: 0.6rem;
+
+  margin-top: 1.6rem;
+}
+
+
+.preview-buttons span {
+  width: 72px;
+  height: 20px;
+
+  border-radius: 3px;
+
+  border:
+    1px solid
+    #234054;
+}
+
+
+.preview-buttons span:first-child {
+  background:
+    var(--accent);
+
+  border-color:
+    var(--accent);
+}
+
+
+
+/* ---------- MINI SYSTEM MOTIF ---------- */
+
+.preview-system {
+  position: relative;
+
+  width: 160px;
+  height: 220px;
+
+  opacity: 0.68;
+}
+
+
+.preview-dot {
+  position: absolute;
+
+  width: 8px;
+  height: 8px;
+
+  border-radius: 50%;
+
+  background:
+    var(--accent);
+}
+
+
+.dot-a {
+  left: 20px;
+  top: 70px;
+}
+
+
+.dot-b {
+  left: 80px;
+  top: 30px;
+}
+
+
+.dot-c {
+  left: 130px;
+  top: 90px;
+}
+
+
+.dot-d {
+  left: 75px;
+  top: 165px;
+}
+
+
+.preview-line {
+  position: absolute;
+
+  height: 1px;
+
+  background:
+    rgba(50, 191, 243, 0.4);
+
+  transform-origin:
+    left center;
+}
+
+
+.line-a {
+  width: 73px;
+
+  left: 25px;
+  top: 74px;
+
+  transform:
+    rotate(-34deg);
+}
+
+
+.line-b {
+  width: 78px;
+
+  left: 84px;
+  top: 34px;
+
+  transform:
+    rotate(50deg);
+}
+
+
+.line-c {
+  width: 92px;
+
+  left: 132px;
+  top: 94px;
+
+  transform:
+    rotate(126deg);
+}
+
+
+
+/* =====================================================
+   RECENT WORK — SUMMARY
+===================================================== */
+
+.recent-summary {
+  max-width: 430px;
+}
+
+
+.recent-kicker {
+  margin:
+    0
+    0
+    0.8rem;
+
+  color: var(--accent);
+
+  font-size: 0.72rem;
+  font-weight: 750;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.14em;
+}
+
+
+.recent-summary h3 {
+  margin:
+    0
+    0
+    1.4rem;
+
+  color: var(--text);
+
+  font-size:
+    clamp(
+      1.7rem,
+      3vw,
+      2.5rem
+    );
+
+  line-height: 1.08;
+
+  letter-spacing: -0.03em;
+}
+
+
+.recent-summary > p {
+  color: var(--muted);
+}
+
+
+.project-meta {
+  margin-top: 2.2rem;
+}
+
+
+.project-meta div {
+  display: grid;
+
+  grid-template-columns:
+    105px
+    1fr;
+
+  gap: 1rem;
+
+  padding:
+    0.85rem
+    0;
+
+  border-top:
+    1px solid
+    var(--border);
+}
+
+
+.project-meta dt {
+  color: #71869a;
+
+  font-size: 0.72rem;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.08em;
+}
+
+
+.project-meta dd {
+  margin: 0;
+
+  color: #c3d0db;
+
+  font-size: 0.88rem;
+}
+
+
+
+/* =====================================================
+   PROJECT STORY
+===================================================== */
+
+.recent-story {
+  border-top:
+    1px solid
+    var(--border);
+}
+
+
+.recent-story-block {
+  display: grid;
+
+  grid-template-columns:
+    100px
+    minmax(0, 780px);
+
+  gap: 2.5rem;
+
+  padding:
+    4.5rem
+    0;
+
+  border-bottom:
+    1px solid
+    var(--border);
+}
+
+
+.story-number {
+  margin: 0;
+
+  color: #536b80;
+
+  font-size: 0.74rem;
+
+  font-weight: 700;
+
+  letter-spacing: 0.12em;
+}
+
+
+.story-label {
+  margin:
+    0
+    0
+    1rem;
+
+  color: var(--accent);
+
+  font-size: 0.72rem;
+  font-weight: 750;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.15em;
+}
+
+
+.recent-story-block h3 {
+  max-width: 700px;
+
+  margin:
+    0
+    0
+    1.25rem;
+
+  color: var(--text);
+
+  font-size:
+    clamp(
+      1.7rem,
+      3vw,
+      2.5rem
+    );
+
+  line-height: 1.08;
+
+  letter-spacing: -0.025em;
+}
+
+
+.recent-story-block > div > p:last-child {
+  max-width: 700px;
+
+  color: var(--muted);
+
+  font-size: 1.02rem;
+}
+
+
+
+/* =====================================================
+   FEATURE QUESTION
+===================================================== */
+
+.feature-question blockquote {
+  max-width: 800px;
+
+  margin: 0;
+
+  color: var(--text);
+
+  font-size:
+    clamp(
+      1.9rem,
+      4vw,
+      3.2rem
+    );
+
+  line-height: 1.12;
+
+  letter-spacing: -0.035em;
+}
+
+
+
+/* =====================================================
+   APPROACH STEPS
+===================================================== */
+
+.approach-steps {
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      5,
+      minmax(0, 1fr)
+    );
+
+  gap: 1px;
+
+  margin-top: 2.5rem;
+
+  background:
+    var(--border);
+
+  border:
+    1px solid
+    var(--border);
+}
+
+
+.approach-steps div {
+  min-height: 155px;
+
+  padding:
+    1.25rem;
+
+  background:
+    #09141f;
+}
+
+
+.approach-steps span {
+  display: block;
+
+  margin-bottom: 2rem;
+
+  color: var(--accent);
+
+  font-size: 0.68rem;
+
+  letter-spacing: 0.12em;
+}
+
+
+.approach-steps p {
+  margin: 0;
+
+  color: #b3c1cd;
+
+  font-size: 0.84rem;
+
+  line-height: 1.45;
+}
+
+
+
+/* =====================================================
+   DECISION + TESTING TAGS
+===================================================== */
+
+.design-decisions,
+.testing-measures {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 0.55rem;
+
+  margin-top: 2rem;
+}
+
+
+.design-decisions span,
+.testing-measures span {
+  padding:
+    0.45rem
+    0.7rem;
+
+  border:
+    1px solid
+    var(--border);
+
+  border-radius: 4px;
+
+  color: #acdff1;
+
+  background:
+    rgba(50, 191, 243, 0.035);
+
+  font-size: 0.76rem;
+}
+
+
+
+/* =====================================================
+   RECENT WORK FOOTER
+===================================================== */
+
+.recent-footer {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: end;
+
+  gap: 3rem;
+
+  padding-top: 4.5rem;
+}
+
+
+.recent-footer p {
+  max-width: 500px;
+
+  color: var(--muted);
+}
+
+
+.recent-project-link {
+  display: inline-block;
+
+  padding-bottom: 0.2rem;
+
+  color: var(--text);
+
+  text-decoration: none;
+
+  border-bottom:
+    1px solid
+    var(--accent);
+
+  font-weight: 700;
+
+  transition:
+    color 0.25s ease;
+}
+
+
+.recent-project-link:hover {
+  color:
+    var(--accent);
+}
+
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 900px) {
+
+  .recent-opening {
+    grid-template-columns: 1fr;
+
+    gap: 3rem;
+  }
+
+
+  .recent-summary {
+    max-width: 700px;
+  }
+
+
+  .approach-steps {
+    grid-template-columns:
+      repeat(
+        2,
+        minmax(0, 1fr)
+      );
+  }
+
+}
+
+
+
+@media (max-width: 620px) {
+
+  .hero {
+    min-height:
+      calc(
+        100vh - 110px
+      );
+  }
+
+
+  .hero-content {
+    padding:
+      4rem
+      0
+      7rem;
+  }
+
+
+  .scroll-prompt {
+    bottom: 1.2rem;
+  }
+
+
+  .recent-work {
+    padding:
+      6rem
+      0;
+  }
+
+
+  .recent-header {
+    margin-bottom: 3.5rem;
+  }
+
+
+  .recent-opening {
+    margin-bottom: 5rem;
+  }
+
+
+  .preview-page {
+    min-height: 330px;
+
+    padding:
+      1.2rem;
+  }
+
+
+  .preview-hero {
+    grid-template-columns:
+      1fr
+      100px;
+  }
+
+
+  .preview-system {
+    width: 100px;
+
+    transform:
+      scale(0.75);
+  }
+
+
+  .recent-story-block {
+    grid-template-columns: 1fr;
+
+    gap: 0.8rem;
+
+    padding:
+      3.5rem
+      0;
+  }
+
+
+  .approach-steps {
+    grid-template-columns: 1fr;
+  }
+
+
+  .approach-steps div {
+    min-height: auto;
+  }
+
+
+  .recent-footer {
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+
+}
