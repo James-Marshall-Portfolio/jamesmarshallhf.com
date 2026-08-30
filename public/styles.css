@@ -1624,3 +1624,15 @@ body {
       0 0 8px rgba(50, 191, 243, 0.42)
     );
 }
+
+
+/* Allow motif interaction through empty hero-content space */
+
+.hero-content {
+  pointer-events: none;
+}
+
+.hero-actions,
+.hero-actions a {
+  pointer-events: auto;
+}
