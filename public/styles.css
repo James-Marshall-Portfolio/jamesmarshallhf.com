@@ -1169,3 +1169,435 @@ body {
   background: var(--accent);
   color: #04101a;
 }
+
+/* =====================================================
+   STEP 1B — AMBIENT SYSTEM FIELD
+   Slow atmospheric color movement + subtle system motion
+===================================================== */
+
+
+/* ---------- AMBIENT HERO DEPTH ---------- */
+
+.hero {
+  isolation: isolate;
+}
+
+
+/*
+  Large, blurred color fields below the content.
+  These move very slowly so the motion is felt more
+  than consciously noticed.
+*/
+.hero::before {
+  content: "";
+
+  position: absolute;
+  z-index: 0;
+
+  width: 900px;
+  height: 700px;
+
+  top: -260px;
+  right: -220px;
+
+  pointer-events: none;
+
+  background:
+    radial-gradient(
+      circle at 30% 35%,
+      rgba(50, 191, 243, 0.16) 0%,
+      rgba(50, 191, 243, 0.07) 28%,
+      transparent 58%
+    ),
+
+    radial-gradient(
+      circle at 72% 40%,
+      rgba(78, 134, 197, 0.18) 0%,
+      rgba(78, 134, 197, 0.06) 31%,
+      transparent 62%
+    ),
+
+    radial-gradient(
+      circle at 48% 78%,
+      rgba(82, 71, 170, 0.10) 0%,
+      transparent 55%
+    );
+
+  filter: blur(55px);
+
+  opacity: 0.85;
+
+  transform-origin: center;
+
+  animation:
+    ambient-field-one
+    38s
+    ease-in-out
+    infinite
+    alternate;
+}
+
+
+/*
+  Second atmospheric layer.
+  It moves on a different cycle so the gradients
+  don't appear to repeat mechanically.
+*/
+.hero::after {
+  content: "";
+
+  position: absolute;
+  z-index: 0;
+
+  width: 760px;
+  height: 640px;
+
+  left: -300px;
+  bottom: -300px;
+
+  pointer-events: none;
+
+  background:
+    radial-gradient(
+      circle at 55% 45%,
+      rgba(36, 88, 143, 0.16) 0%,
+      rgba(36, 88, 143, 0.05) 36%,
+      transparent 65%
+    ),
+
+    radial-gradient(
+      circle at 32% 72%,
+      rgba(50, 191, 243, 0.08) 0%,
+      transparent 58%
+    );
+
+  filter: blur(65px);
+
+  opacity: 0.75;
+
+  animation:
+    ambient-field-two
+    47s
+    ease-in-out
+    infinite
+    alternate;
+}
+
+
+/* ---------- AMBIENT FIELD MOTION ---------- */
+
+@keyframes ambient-field-one {
+
+  0% {
+    transform:
+      translate3d(0, 0, 0)
+      scale(1);
+  }
+
+  35% {
+    transform:
+      translate3d(-35px, 25px, 0)
+      scale(1.05);
+  }
+
+  70% {
+    transform:
+      translate3d(20px, 55px, 0)
+      scale(0.98);
+  }
+
+  100% {
+    transform:
+      translate3d(-20px, 15px, 0)
+      scale(1.08);
+  }
+
+}
+
+
+@keyframes ambient-field-two {
+
+  0% {
+    transform:
+      translate3d(0, 0, 0)
+      scale(1);
+  }
+
+  45% {
+    transform:
+      translate3d(55px, -30px, 0)
+      scale(1.08);
+  }
+
+  75% {
+    transform:
+      translate3d(15px, -55px, 0)
+      scale(1.02);
+  }
+
+  100% {
+    transform:
+      translate3d(70px, -15px, 0)
+      scale(1.10);
+  }
+
+}
+
+
+
+/* =====================================================
+   SYSTEM MOTIF MOTION
+===================================================== */
+
+
+/*
+  Keep the entire system diagram moving as one object.
+  This preserves the relationships between the nodes
+  and their connecting lines.
+*/
+
+.hero-decoration {
+  z-index: 1;
+
+  opacity: 0.32;
+
+  animation:
+    system-drift
+    34s
+    ease-in-out
+    infinite
+    alternate;
+
+  will-change:
+    transform,
+    opacity;
+}
+
+
+@keyframes system-drift {
+
+  0% {
+    transform:
+      translate3d(0, 0, 0)
+      rotate(0deg);
+  }
+
+  40% {
+    transform:
+      translate3d(-8px, 5px, 0)
+      rotate(0.6deg);
+  }
+
+  70% {
+    transform:
+      translate3d(5px, 10px, 0)
+      rotate(-0.3deg);
+  }
+
+  100% {
+    transform:
+      translate3d(-4px, -4px, 0)
+      rotate(0.4deg);
+  }
+
+}
+
+
+
+/* ---------- NODE APPEARANCE ---------- */
+
+.node {
+  background: var(--accent);
+
+  box-shadow:
+    0 0 0 5px rgba(50, 191, 243, 0.035),
+    0 0 18px rgba(50, 191, 243, 0.16);
+}
+
+
+/*
+  Each node "breathes" independently.
+  Different durations prevent synchronized motion.
+*/
+
+.node-1 {
+  animation:
+    node-breathe
+    8s
+    ease-in-out
+    infinite
+    alternate;
+}
+
+
+.node-2 {
+  animation:
+    node-breathe
+    11s
+    ease-in-out
+    1.5s
+    infinite
+    alternate;
+}
+
+
+.node-3 {
+  animation:
+    node-breathe
+    9.5s
+    ease-in-out
+    3s
+    infinite
+    alternate;
+}
+
+
+.node-4 {
+  animation:
+    node-breathe
+    13s
+    ease-in-out
+    0.75s
+    infinite
+    alternate;
+}
+
+
+@keyframes node-breathe {
+
+  0% {
+    opacity: 0.55;
+
+    transform:
+      scale(0.92);
+  }
+
+  45% {
+    opacity: 0.9;
+
+    transform:
+      scale(1);
+  }
+
+  100% {
+    opacity: 0.68;
+
+    transform:
+      scale(1.08);
+  }
+
+}
+
+
+
+/* ---------- CONNECTION LINES ---------- */
+
+.connection {
+  opacity: 0.42;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(50, 191, 243, 0.15),
+      rgba(50, 191, 243, 0.55),
+      rgba(78, 134, 197, 0.18)
+    );
+
+  animation:
+    connection-breathe
+    12s
+    ease-in-out
+    infinite
+    alternate;
+}
+
+
+.connection-2 {
+  animation-duration: 15s;
+  animation-delay: 2s;
+}
+
+
+.connection-3 {
+  animation-duration: 18s;
+  animation-delay: 4s;
+}
+
+
+@keyframes connection-breathe {
+
+  0% {
+    opacity: 0.22;
+  }
+
+  50% {
+    opacity: 0.52;
+  }
+
+  100% {
+    opacity: 0.30;
+  }
+
+}
+
+
+
+/* =====================================================
+   VERY SUBTLE HERO LIGHT
+===================================================== */
+
+
+/*
+  A faint highlight behind the main statement.
+  This keeps the left side from feeling completely flat
+  while leaving the text as the highest-contrast element.
+*/
+
+.hero-content::before {
+  content: "";
+
+  position: absolute;
+  z-index: -1;
+
+  width: 560px;
+  height: 360px;
+
+  left: -180px;
+  top: 70px;
+
+  pointer-events: none;
+
+  background:
+    radial-gradient(
+      ellipse at center,
+      rgba(36, 88, 143, 0.09) 0%,
+      transparent 68%
+    );
+
+  filter: blur(35px);
+}
+
+
+
+/* =====================================================
+   ACCESSIBILITY — REDUCED MOTION
+===================================================== */
+
+
+/*
+  If a visitor has reduced motion enabled at the
+  operating-system/browser level, keep the atmospheric
+  visual treatment but stop all animation.
+*/
+
+@media (prefers-reduced-motion: reduce) {
+
+  .hero::before,
+  .hero::after,
+  .hero-decoration,
+  .node,
+  .connection {
+    animation: none !important;
+  }
+
+}
