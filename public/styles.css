@@ -1419,8 +1419,7 @@ body {
 
   z-index: 1;
 
-  opacity: 1;
-  background: red; 
+  opacity: 1; 
 
   pointer-events: auto;
 
