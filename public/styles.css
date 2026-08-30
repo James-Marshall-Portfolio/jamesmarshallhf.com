@@ -1490,39 +1490,7 @@ body {
    INTERACTION
 ===================================================== */
 
-.system-motif:hover {
-  opacity: 0.62;
 
-  transform:
-    scale(1.035);
-
-  filter:
-    brightness(1.08);
-}
-
-
-.system-motif:hover .motif-line {
-  stroke-opacity: 0.44;
-}
-
-
-.system-motif:hover .motif-node {
-  fill-opacity: 0.95;
-
-  filter:
-    drop-shadow(
-      0 0 7px rgba(50, 191, 243, 0.28)
-    );
-}
-
-
-
-/* individual nodes react just slightly */
-
-.system-motif .motif-node:hover {
-  transform:
-    scale(1.14);
-}
 
 
 
@@ -1558,4 +1526,101 @@ body {
     transition: none;
   }
 
+}
+
+
+
+/* =====================================================
+   INDIVIDUAL MOTIF INTERACTION
+===================================================== */
+
+
+/* ---------- INVISIBLE LINE TARGETS ---------- */
+
+/*
+  The visible line is intentionally thin.
+  This transparent line gives each connection a much
+  larger mouse target without changing its appearance.
+*/
+
+.motif-line-hit {
+  stroke: transparent;
+
+  stroke-width: 18;
+
+  pointer-events: stroke;
+
+  cursor: default;
+}
+
+
+/* ---------- INVISIBLE NODE TARGETS ---------- */
+
+.motif-node-hit {
+  fill: transparent;
+
+  pointer-events: fill;
+
+  cursor: default;
+}
+
+
+
+/* =====================================================
+   INDIVIDUAL CONNECTION HOVER
+===================================================== */
+
+.motif-edge {
+  pointer-events: auto;
+}
+
+
+.motif-edge .motif-line {
+  transition:
+    stroke-opacity 0.35s ease,
+    stroke-width 0.35s ease,
+    filter 0.35s ease;
+}
+
+
+.motif-edge:hover .motif-line {
+  stroke-opacity: 0.72;
+
+  stroke-width: 2;
+
+  filter:
+    drop-shadow(
+      0 0 4px rgba(50, 191, 243, 0.28)
+    );
+}
+
+
+
+/* =====================================================
+   INDIVIDUAL NODE HOVER
+===================================================== */
+
+.motif-point {
+  pointer-events: auto;
+}
+
+
+.motif-point .motif-node {
+  transition:
+    fill-opacity 0.35s ease,
+    transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    filter 0.35s ease;
+}
+
+
+.motif-point:hover .motif-node {
+  fill-opacity: 1;
+
+  transform:
+    scale(1.22);
+
+  filter:
+    drop-shadow(
+      0 0 8px rgba(50, 191, 243, 0.42)
+    );
 }
