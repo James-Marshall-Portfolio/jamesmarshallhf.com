@@ -2662,3 +2662,190 @@ body {
   }
 
 }
+
+
+/* =====================================================
+   STEP 2 — SECONDARY PAGES
+===================================================== */
+
+
+/* =====================================================
+   PAGE HERO
+===================================================== */
+
+.page-hero {
+  padding:
+    8rem
+    0
+    5rem;
+
+  background:
+    radial-gradient(
+      circle at 80% 20%,
+      rgba(50, 191, 243, 0.08),
+      transparent 35%
+    ),
+    var(--background);
+
+  border-bottom:
+    1px solid
+    var(--border);
+}
+
+
+.page-label {
+  margin:
+    0
+    0
+    1.4rem;
+
+  color: var(--accent);
+
+  font-size: 0.75rem;
+  font-weight: 750;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.16em;
+}
+
+
+.page-hero h1 {
+  max-width: 950px;
+
+  margin:
+    0
+    0
+    1.8rem;
+
+  color: var(--text);
+
+  font-size:
+    clamp(
+      3rem,
+      6vw,
+      5.5rem
+    );
+
+  line-height: 0.98;
+
+  letter-spacing: -0.045em;
+}
+
+
+.page-intro {
+  max-width: 700px;
+
+  margin: 0;
+
+  color: var(--muted);
+
+  font-size: 1.15rem;
+}
+
+
+
+/* =====================================================
+   PROJECTS PAGE
+===================================================== */
+
+.projects-page {
+  min-height: 60vh;
+}
+
+
+
+/* =====================================================
+   ABOUT PAGE
+===================================================== */
+
+.about-page {
+  background:
+    var(--background);
+}
+
+
+
+/* =====================================================
+   ABOUT CONTACT
+===================================================== */
+
+.about-contact {
+  padding:
+    7rem
+    0;
+
+  background:
+    #050c13;
+
+  border-top:
+    1px solid
+    var(--border);
+}
+
+
+.about-contact-grid {
+  display: grid;
+
+  grid-template-columns:
+    minmax(300px, 1fr)
+    minmax(250px, 0.7fr);
+
+  gap: 5rem;
+
+  align-items: end;
+}
+
+
+.about-contact h2 {
+  margin:
+    0
+    0
+    1.3rem;
+
+  color: var(--text);
+
+  font-size:
+    clamp(
+      2.5rem,
+      5vw,
+      4.5rem
+    );
+
+  line-height: 1;
+}
+
+
+.about-contact p {
+  max-width: 600px;
+
+  color: var(--muted);
+}
+
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 850px) {
+
+  .about-contact-grid {
+    grid-template-columns: 1fr;
+
+    gap: 3rem;
+  }
+
+}
+
+
+@media (max-width: 620px) {
+
+  .page-hero {
+    padding:
+      6rem
+      0
+      4rem;
+  }
+
+}
